@@ -35,13 +35,13 @@ public class AmazonTC3 {
 		driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']")).sendKeys("Bag for Boys"+Keys.ENTER);
 		String fetchResult = driver.findElement(By.xpath("//div[@class='a-section a-spacing-small a-spacing-top-small']")).getText();
 		System.out.println("Fetched Result Count: " +fetchResult);
-		driver.findElement(By.xpath("(//span[@class='a-label a-checkbox-label'])[3]"));
-		driver.findElement(By.xpath("(//span[@class='a-label a-checkbox-label'])[4]"));
+		driver.findElement(By.xpath("(//i[@class='a-icon a-icon-checkbox'])[3]")).click();
+		driver.findElement(By.xpath("(//i[@class='a-icon a-icon-checkbox'])[4]")).click();
 		driver.findElement(By.xpath("//span[@class='a-button-text a-declarative']")).click();
 		driver.findElement(By.xpath("//a[text()='Newest Arrivals']")).click();
 		String productName = driver.findElement(By.xpath("//h2[@class='a-size-mini a-spacing-none a-color-base s-line-clamp-2']")).getText();
 		System.out.println("Product Name: " +productName);
-		String discountedPrice = driver.findElement(By.xpath("//div[@class='a-row']")).getText();
+		String discountedPrice = driver.findElement(By.xpath("(//div[@class='a-row'])[2]")).getText();
 		System.out.println("Discounted Price: " +discountedPrice);
 		
 		
